@@ -27,5 +27,3 @@ get routes() {
     }
 }
 tg.router.when(['hey', 'hi', 'hello'], new GreetingController())
-
-alert("Hola");
