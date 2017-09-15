@@ -1,0 +1,19 @@
+{
+  "name": "leviatasbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {    
+    "npm": "3.10.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+,
+  "dependencies": {
+    "express": "^4.15.4",
+    "telegram-node-bot": "^4.0.5"
+  }
+}
