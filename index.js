@@ -17,7 +17,7 @@ class GreetingController extends TelegramBaseController {
      */
     greetingHandler($) {
         $.sendMessage('Hey, how are you?')
-    }
+}
 get routes() {
         return {
             'hey': 'greetingHandler',
@@ -26,5 +26,4 @@ get routes() {
         }
     }
 }
-tg.router
-  .when(['hey', 'hi', 'hello'], new GreetingController())
+tg.router.when(['hey', 'hi', 'hello'], new GreetingController())
