@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {    
-    "npm": "4.0.2"
-  },
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
-,
+  "license": "ISC",
   "dependencies": {
+    "codeday-clear": "^1.1.4",
     "express": "^4.15.4",
+    "moment": "^2.18.1",
+    "node-telegram-bot-api": "^0.28.0",
     "telegram-node-bot": "^4.0.5"
   }
 }
