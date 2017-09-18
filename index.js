@@ -22,10 +22,9 @@ listener.listen(app.get('port'), function (){
 console.log('Your app runing on '+ app.get('port'));
 });
 
+/*
 class PingController extends TelegramBaseController {
-    /**
-     * @param {Scope} $
-     */
+    
     pingHandler($) {
         $.sendMessage('pong')
     }
@@ -41,4 +40,4 @@ tg.router
     .when(
         new TextCommand('ping', 'pingCommand'),
         new PingController()
-    )
+    )*/
