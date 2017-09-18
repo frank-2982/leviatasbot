@@ -7,12 +7,12 @@ app.get('/', function(request, response) {
   
 });
 
-const TelegramLib = require('telegram-node-bot');
 
 var TelegramBot = require('telegram-node-bot'),
     // Be sure to replace YOUR_BOT_TOKEN with your actual bot token on this line.
     telegram = new TelegramBot("286347105:AAEST1sg39bF1pVMcrF_klijfMuTlkORP-U", { polling: true });
 
+const TelegramLib = require('telegram-node-bot');
 const TelegramBaseController = TelegramLib.TelegramBaseController;
 const TextCommand = TelegramLib.TextCommand;
 
