@@ -19,7 +19,12 @@ const options = {
 const url = process.env.APP_URL || 'https://leviatasbot.herokuapp.com:443';
 const bot = new TelegramBot(TOKEN, options);
 
+var Clear = require('codeday-clear'),
+// Our sample app token and secret
+    clear = new Clear("1YZiGaj3baaLU8IKVsASRIWaNF2oJNg0", "1COMnWyGnGBsNqkhaZ6WMBWB9UWZw6QZ");
 
+// moment is not a class, just a simple function
+var moment = require('moment');
 
 // This informs the Telegram servers of the new webhook.
 // Note: we do not need to pass in the cert, as it already provided
