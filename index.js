@@ -17,6 +17,11 @@ const TextCommand = Telegram.TextCommand
 
 const tg = new Telegram.Telegram('286347105:AAEST1sg39bF1pVMcrF_klijfMuTlkORP-U')
 
+tg.onMaster(() => {
+listener.listen(app.get('port'), function (){
+console.log('Your app runing on '+ app.get('port'));
+});
+
 class PingController extends TelegramBaseController {
     /**
      * @param {Scope} $
