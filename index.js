@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
 
 app.listen(process.env.PORT || 3000);
 
-
+'use strict'
 
 const Telegram = require('telegram-node-bot')
 const TelegramBaseController = Telegram.TelegramBaseController
