@@ -7,33 +7,10 @@ app.get('/', function(request, response) {
   
 });
 
-
-var TelegramBot = require('telegram-node-bot'),
+var TelegramBot = require('node-telegram-bot-api'),
     // Be sure to replace YOUR_BOT_TOKEN with your actual bot token on this line.
     telegram = new TelegramBot("286347105:AAEST1sg39bF1pVMcrF_klijfMuTlkORP-U", { polling: true });
 
-const TelegramLib = require('telegram-node-bot');
-const TelegramBaseController = TelegramLib.TelegramBaseController;
-const TextCommand = TelegramLib.TextCommand;
-
-class PingController extends TelegramBaseController {
-    /**
-     * @param {Scope} $
-     */
-    pingHandler($) {
-        $.sendMessage('pong')
-    }
-
-    get routes() {
-        return {
-            'pingCommand': 'pingHandler'
-        }
-    }
-}
-
-telegram.router.when(new TextCommand('ping', 'pingCommand'), new PingController());
-
-/*
 var Clear = require('codeday-clear'),
     // Our sample app token and secret
     clear = new Clear("1YZiGaj3baaLU8IKVsASRIWaNF2oJNg0", "1COMnWyGnGBsNqkhaZ6WMBWB9UWZw6QZ");
@@ -80,4 +57,4 @@ telegram.on("inline_query", (query) => {
 
     telegram.answerInlineQuery(query.id, queryResults);
   });
-});*/
+});
