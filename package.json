@@ -12,6 +12,7 @@
     "codeday-clear": "^1.1.4",
     "express": "^4.15.4",
     "moment": "^2.18.1",
-    "node-telegram-bot-api": "^0.28.0"    
+    "node-telegram-bot-api": "^0.28.0",
+    "telegram-node-bot": "^4.0.5"    
   }
 }
