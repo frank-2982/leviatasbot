@@ -9,35 +9,11 @@ app.get('/', function(request, response) {
 
 app.listen(process.env.PORT || 3000);
 
-'use strict'
 
-const Telegram = require('telegram-node-bot')
-const TelegramBaseController = Telegram.TelegramBaseController
-const TextCommand = Telegram.TextCommand
 
-const tg = new Telegram.Telegram('286347105:AAEST1sg39bF1pVMcrF_klijfMuTlkORP-U')
+const Telegram = require('telegram-node-bot');
+const TelegramBaseController = Telegram.TelegramBaseController;
+const TextCommand = Telegram.TextCommand;
 
-tg.onMaster(() => {
-listener.listen(app.get('port'), function (){
-console.log('Your app runing on '+ app.get('port'));
-});
+const tg = new Telegram.Telegram('286347105:AAEST1sg39bF1pVMcrF_klijfMuTlkORP-U');
 
-/*
-class PingController extends TelegramBaseController {
-    
-    pingHandler($) {
-        $.sendMessage('pong')
-    }
-
-    get routes() {
-        return {
-            'pingCommand': 'pingHandler'
-        }
-    }
-}
-
-tg.router
-    .when(
-        new TextCommand('ping', 'pingCommand'),
-        new PingController()
-    )*/
