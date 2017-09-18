@@ -1,4 +1,11 @@
+var express = require('express');
+var app = express();
+
 app.set('port', process.env.PORT || 3000);
+
+app.get('/', function(request, response) {
+  
+});
 
 var TelegramBot = require('node-telegram-bot-api'),
     // Be sure to replace YOUR_BOT_TOKEN with your actual bot token on this line.
