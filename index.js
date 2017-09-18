@@ -9,24 +9,31 @@ app.get('/', function(request, response) {
 
 app.listen(process.env.PORT || 3000);
 
+
+
 const Telegram = require('telegram-node-bot')
 const TelegramBaseController = Telegram.TelegramBaseController
+const TextCommand = Telegram.TextCommand
+
 const tg = new Telegram.Telegram('286347105:AAEST1sg39bF1pVMcrF_klijfMuTlkORP-U')
 
-class GreetingController extends TelegramBaseController {
+class PingController extends TelegramBaseController {
     /**
      * @param {Scope} $
      */
-    	greetingHandler($) {
-        	$.sendMessage('Hey, how are you?')
-	}
-	get routes() {
-        	return {
-		'hey': 'greetingHandler',
-	        'hi': 'greetingHandler',
-                'hello': 'greetingHandler',
-        	}
-    	}
+    pingHandler($) {
+        $.sendMessage('pong')
+    }
+
+    get routes() {
+        return {
+            'pingCommand': 'pingHandler'
+        }
+    }
 }
 
-tg.router.when(['hey', 'hi', 'hello'], new GreetingController());
+tg.router
+    .when(
+        new TextCommand('ping', 'pingCommand'),
+        new PingController()
+    )
