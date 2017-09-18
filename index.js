@@ -21,7 +21,10 @@ telegram.on("text", (message) => {
            parse_mode: "Markdown"
       });
     });
-  }
+  }else{
+telegram.sendMessage(message.chat.id, "Hello world");
+
+	}
 });
 
 telegram.on("inline_query", (query) => {
